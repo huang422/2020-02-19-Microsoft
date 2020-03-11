@@ -1,0 +1,570 @@
+@charset "UTF-8";
+@media (max-width: 1920px) {
+  /* 針對全域消除邊界設定 */
+  body {
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  /* 自動計算padding */
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  /* 背景圖片自動調整及置中 */
+  .bg-fix {
+    background-size: cover;
+    background-position: center;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    /* 隱藏超連結底線 */
+  }
+  a:hover {
+    border-bottom: solid;
+    border-width: 2px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .color-blue {
+    color: #0067b8;
+    font-weight: bold;
+  }
+  .font-15 {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .navbar {
+    width: 90%;
+    /* max-width: calc(1600px + 10%); */
+    height: 54px;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 40px;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar .logo {
+    width: 130px;
+    height: 45px;
+    padding: 6px 6px 16px 16px;
+  }
+  .navbar .navbarL {
+    width: calc(50% - 55px);
+    height: 49px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-size: 13px;
+  }
+  .navbar .navbarL ul {
+    list-style: none;
+    padding: 0 0 0 10px;
+  }
+  .navbar .navbarL ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 8px;
+    outline: none;
+  }
+  .navbar .navbarR {
+    width: calc(50% - 55px);
+    height: 54px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 5px 0;
+    font-size: 13px;
+  }
+  .navbar .navbarR ul {
+    list-style: none;
+    padding: 0 0 0 10px;
+  }
+  .navbar .navbarR ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 8px;
+    outline: none;
+  }
+  .logo a:focus, .navbarL ul li a:focus, .navbarR ul li a:focus, .menu ul li a:focus {
+    outline: black dotted 1px;
+  }
+  .navbar-phone {
+    display: none;
+  }
+  .banner {
+    width: 90%;
+    padding: 0 40px;
+    margin: auto;
+  }
+  .banner .bannerA-picture {
+    width: 100%;
+    height: 600px;
+    background-image: url("./img/Banner/Office-1.webp");
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 180px;
+  }
+  .banner .bannerA-picture a {
+    color: white;
+    background-color: black;
+    padding: 10px 10px;
+  }
+  .banner .bannerB-picture {
+    width: 100%;
+    height: 600px;
+    background-image: url("./img/Banner/BannerB-1.webp");
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 20px;
+  }
+  .banner .bannerB-picture a {
+    color: white;
+    background-color: black;
+    padding: 10px 10px;
+  }
+  .section {
+    width: 90%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section .col-12 {
+    padding: 42px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section .col-12 .col-6 {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section .col-12 .col-6 .col-6-2 {
+    width: 50%;
+  }
+  .section .col-12 .col-6 .col-6-2 .col-6-2-imgbox {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+  }
+  .section .col-12 .col-6 .col-6-2 .col-6-2-imgbox img {
+    max-width: 100%;
+    max-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section .col-12 .col-6 .col-6-2 .col-6-2-imgbox .mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .section .col-12 .col-6 .col-6-2 .col-6-2-imgbox .mask:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .section .col-12 .col-6 .col-6-2 .s-heading {
+    padding: 27px 0 0 0;
+  }
+  .bottom {
+    width: 90%;
+    height: 63px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    margin-bottom: 30px;
+    padding-left: 40px;
+  }
+  .bottom .bottom-logo {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+  }
+  .logo a:hover, .bottom-logo a:hover {
+    border: none;
+  }
+  .footer {
+    width: 100%;
+    height: 397px;
+    background-color: gainsboro;
+    padding: 0 30px;
+  }
+  .footer .footer-top {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer .footer-top .footer-top-in {
+    width: calc(17% - 5px);
+    height: 100%;
+    margin-right: 5px;
+  }
+  .footer .footer-top .footer-top-in ul {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footer-top .footer-top-in ul li {
+    list-style: none;
+    padding: 3px 12px;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .footer .footer-top .footer-top-in ul li a:hover {
+    text-decoration: underline;
+  }
+  .footer .footer-btm {
+    width: 90%;
+    height: 10%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .footer-btm .footer-btm-L {
+    /* width: 50%; */
+    /* 不限制寬度，用字寬撐開，就有移動空間 */
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .footer-btm .footer-btm-L .bottom-logo {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+  }
+  .footer .footer-btm .footer-btm-L .nav-btn {
+    padding: 10px 10px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .footer .footer-btm .footer-btm-L .nav-btn a:hover {
+    text-decoration: underline;
+  }
+  .footer .footer-btm .footer-btm-L .color-black {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .footer .footer-btm .footer-btm-R {
+    /* width: 50%; */
+    /* 不限制寬度，用字寬撐開，就有移動空間 */
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .footer-btm .footer-btm-R .nav-btn {
+    padding: 10px 10px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .footer .footer-btm .footer-btm-R .nav-btn a:hover {
+    text-decoration: underline;
+  }
+  .footer .footer-btm .footer-btm-R .color-black {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* 平板版本 */
+@media (max-width: 1083px) {
+  .navbar {
+    padding: 0;
+  }
+  .banner {
+    padding: 0;
+    width: 100%;
+  }
+  .banner .bannerA-picture {
+    height: 609px;
+    background-image: url("./img/Banner/Office-3.webp");
+  }
+  .banner .bannerB-picture {
+    height: 609px;
+    background-image: url("./img/Banner/BannerB-3.webp");
+  }
+  .section .col-12 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section .col-12 .col-6 {
+    width: 100%;
+  }
+  .footer {
+    height: 687px;
+  }
+  .footer .footer-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer .footer-top .footer-top-in {
+    height: 0;
+    width: 33%;
+  }
+}
+
+@media (max-width: 859px) {
+  .navbar {
+    display: none;
+  }
+  .navbar-phone a {
+    border-bottom: none;
+  }
+  .banner .bannerA-picture {
+    height: 431px;
+    background-image: url("./img/Banner/Office-3.webp");
+    background-size: contain;
+  }
+  .banner .bannerB-picture {
+    height: 431px;
+    background-image: url("./img/Banner/BannerB-3.webp");
+  }
+  .logo {
+    display: none;
+  }
+  .navbar-phone {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar-phone .navbar-phone-L {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-phone .navbar-phone-L .burgerbar {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  .navbar-phone .navbar-phone-L .burgerbar a:focus {
+    outline: black dotted 1px;
+  }
+  .navbar-phone .navbar-phone-L .burgerbar:hover ~ .menu {
+    display: block;
+  }
+  .navbar-phone .navbar-phone-L .top-logo {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+  }
+  .navbar-phone .navbar-phone-L .top-logo a:focus {
+    outline: black dotted 1px;
+  }
+  .navbar-phone .navbar-phone-L .menu {
+    width: 100%;
+    position: absolute;
+    top: 37px;
+    z-index: 1;
+    display: none;
+  }
+  .navbar-phone .navbar-phone-L .menu ul {
+    list-style: none;
+    padding: 0 0 0 10px;
+  }
+  .navbar-phone .navbar-phone-L .menu ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 8px;
+    outline: none;
+  }
+  .navbar-phone .navbar-phone-L .menu ul .menu-btn {
+    width: 100vw;
+    height: 30px;
+    padding: 25px 10px;
+    background-color: gainsboro;
+  }
+  .navbar-phone .navbar-phone-L .menu:hover {
+    display: block;
+  }
+  .navbar-phone .navbar-phone-M {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 54px;
+  }
+  .navbar-phone .navbar-phone-M a:focus {
+    outline: black dotted 1px;
+  }
+  .navbar-phone .navbar-phone-M img {
+    width: 120px;
+    height: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar-phone .navbar-phone-R {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .navbar-phone .navbar-phone-R .top-logo {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+  }
+  .navbar-phone .navbar-phone-R .top-logo a:focus {
+    outline: black dotted 1px;
+  }
+}
+
+/* 手機版本 */
+@media (max-width: 539px) {
+  .section .col-12 .col-6 {
+    /* flex-direction: column; */
+    /* 手機板column無置中，改wrap */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section .col-12 .col-6 .col-6-2 {
+    width: 100%;
+  }
+  .banner .bannerA-picture {
+    height: 403px;
+    background-image: url("./img/Banner/Office-5.webp");
+    padding-top: 225px;
+  }
+  .banner .bannerB-picture {
+    height: 403px;
+    background-image: url("./img/Banner/BannerB-5.jfif");
+    padding-top: 500px;
+    background-repeat: no-repeat;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 80px;
+  }
+  .footer {
+    height: 1387px;
+  }
+  .footer .footer-top .footer-top-in {
+    height: 0;
+    width: 100%;
+  }
+  .footer .footer-btm {
+    width: 80%;
+    height: 63px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer .footer-btm .footer-btm-L {
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 15px;
+  }
+  .footer .footer-btm .footer-btm-R {
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+/*# sourceMappingURL=style.css.map */
